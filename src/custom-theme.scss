@@ -9,6 +9,149 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+// Promo Blue Material Color Palette
+
+$promo-blue: (
+  50 : #e6f4f9,
+  100 : #bfe4ef,
+  200 : #95d3e5,
+  300 : #6bc1db,
+  400 : #4bb3d3,
+  500 : #2ba6cb,
+  600 : #269ec6,
+  700 : #2095be,
+  800 : #1a8bb8,
+  900 : #107bac,
+  A100 : #dbf3ff,
+  A200 : #a8e1ff,
+  A400 : #75d0ff,
+  A700 : #5cc7ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+// Promo Green Material Color Palette
+
+$promo-green: (
+  50 : #ecf6e3,
+  100 : #cfeab9,
+  200 : #b0dc8a,
+  300 : #90cd5b,
+  400 : #78c338,
+  500 : #60b815,
+  600 : #58b112,
+  700 : #4ea80f,
+  800 : #44a00c,
+  900 : #339106,
+  A100 : #cfffbe,
+  A200 : #aaff8b,
+  A400 : #84ff58,
+  A700 : #71ff3e,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+
+// Promo Red Material Color Palette
+
+$promo-red: (
+  50 : #ffecec,
+  100 : #ffcfcf,
+  200 : #ffafaf,
+  300 : #ff8f8f,
+  400 : #ff7777,
+  500 : #ff5f5f,
+  600 : #ff5757,
+  700 : #ff4d4d,
+  800 : #ff4343,
+  900 : #ff3232,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffdddd,
+  A700 : #ffc3c3,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000
+  )
+);
+
+
+// *** Custom Revionics Palette ***
+
+// $rev-colors: (
+//   promo-blue: #2BA6CB,
+//   promo-green: #60B815,
+//   promo-red: #FF5F5F
+// );
+//
+// $promo-blue: (
+//   500: #2BA6CB,
+//   contrast: (
+//     500: #FFFFFF
+//   )
+// );
+//
+// $promo-green: (
+//   500: #60B815,
+//   contrast: (
+//     500: #FFFFFF
+//   )
+// );
+//
+// $promo-red: (
+//   500: #FF5F5F,
+//   contrast: (
+//     500: #FFFFFF
+//   )
+// );
+
+// $rev-primary: map-get($rev-colors, "promo-blue");
+$rev-primary: mat-palette($promo-blue);
+$rev-accent: mat-palette($promo-green);
+$rev-warn: mat-palette($promo-red);
+$rev-theme: mat-light-theme($rev-primary, $rev-accent,$rev-warn);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -24,8 +167,8 @@ $angular-material-theme-theme: mat-light-theme($angular-material-theme-primary, 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($angular-material-theme-theme);
-
+// @include angular-material-theme($angular-material-theme-theme);
+@include angular-material-theme($rev-theme);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

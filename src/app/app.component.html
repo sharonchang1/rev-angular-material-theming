@@ -1,14 +1,15 @@
 <div>
-  <h1>Welcome to {{title}}</h1>
+  <!-- <h1>Welcome to {{title}}</h1> -->
+  <h1>Welcome to Angular Material Theme Demo</h1>
 
   <mat-card>
     <!-- Buttons -->
     <mat-card-title>Buttons</mat-card-title>
-    <button mat-stroked-button color="primary" type="button" name="button">Primary</button>
-    <button mat-stroked-button color="accent" type="button" name="button">Accent/Secondary</button>
-    <button mat-stroked-button color="warn" type="button" name="button">Warn</button>
-    <button mat-stroked-button color="warn" type="button" name="button">Delete</button>
-    <button mat-stroked-button color="warn" type="button" name="button">Cancel</button>
+    <button mat-flat-button color="primary" type="button" name="button">Primary</button>
+    <button mat-flat-button color="accent" type="button" name="button">Accent/Secondary</button>
+    <button mat-flat-button color="warn" type="button" name="button">Warn</button>
+    <!-- <button mat-flat-button color="warn" type="button" name="button">Delete</button> -->
+    <!-- <button mat-flat-button color="warn" type="button" name="button">Cancel</button> -->
   </mat-card>
 
   <mat-card>
@@ -36,11 +37,15 @@
 
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Default Dropdown</mat-label>
-        <mat-select [(ngModel)]="selectedValue" name="dropdownOptions" placeholder="Please select an option">
-          <mat-option>- - -</mat-option>
-          <mat-option *ngFor="let dropdownOption of dropdownOptions" [value]="dropdownOption.value">
+        <!-- <mat-select [(ngModel)]="selectedValue" name="dropdownOptions" placeholder="Please select an option"> -->
+          <!-- <mat-option *ngFor="let dropdownOption of dropdownOptions" [value]="dropdownOption.value">
             {{dropdownOption.viewValue}}
-          </mat-option>
+          </mat-option> -->
+        <mat-select placeholder="Please select an option">
+          <mat-option>- - -</mat-option>
+          <mat-option value="option-1">Option 1</mat-option>
+          <mat-option value="option-2">Option 2</mat-option>
+          <mat-option value="option-3">Option 3</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="fill" floatLabel="always">
@@ -53,11 +58,15 @@
       </mat-form-field>
       <mat-form-field appearance="fill" class="mat-focused" floatLabel="always">
         <mat-label>Active Dropdown</mat-label>
-        <mat-select [(ngModel)]="selectedValue" name="dropdownOptions" placeholder="Please select an option">
-          <mat-option>- - -</mat-option>
+        <!-- <mat-select [(ngModel)]="selectedValue" name="dropdownOptions" placeholder="Please select an option">
           <mat-option *ngFor="let dropdownOption of dropdownOptions" [value]="dropdownOption.value">
             {{dropdownOption.viewValue}}
-          </mat-option>
+          </mat-option> -->
+        <mat-select placeholder="Please select an option">
+          <mat-option>- - -</mat-option>
+          <mat-option value="option-1">Option 1</mat-option>
+          <mat-option value="option-2">Option 2</mat-option>
+          <mat-option value="option-3">Option 3</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="fill" floatLabel="always">
@@ -82,7 +91,7 @@
       <mat-card-subtitle>Checkboxes Implemented with mat-selection-list</mat-card-subtitle>
 
       <!-- Checkboxes implemented with mat-selection-list -->
-      <mat-selection-list>
+      <mat-selection-list color="primary">
         <mat-list-option checkboxPosition='before'>Unchecked</mat-list-option>
         <mat-list-option checkboxPosition='before' selected>Checked</mat-list-option>
         <mat-list-option checkboxPosition='before' disabled>Disabled</mat-list-option>
@@ -92,12 +101,12 @@
 
       <mat-card-subtitle>Checkboxes Implemented with mat-checkbox</mat-card-subtitle>
       <mat-checkbox>Unchecked</mat-checkbox>
-      <mat-checkbox checked="true">Checked</mat-checkbox>
+      <mat-checkbox checked="true" color="primary">Checked</mat-checkbox>
       <mat-checkbox disabled="true">Disabled</mat-checkbox>
 
       <!-- Radio Buttons -->
       <mat-card-subtitle>Radio Buttons</mat-card-subtitle>
-        <mat-radio-group>
+        <mat-radio-group color="primary">
           <mat-radio-button value="unchecked">Unchecked</mat-radio-button>
           <mat-radio-button value="checked" checked>Checked</mat-radio-button>
           <mat-radio-button value="disabled" disabled>Disabled</mat-radio-button>
@@ -115,7 +124,7 @@
       <mat-card-subtitle>Switches</mat-card-subtitle>
 
       <mat-slide-toggle>Unchecked</mat-slide-toggle>
-      <mat-slide-toggle checked>Checked</mat-slide-toggle>
+      <mat-slide-toggle color="primary" checked>Checked</mat-slide-toggle>
       <mat-slide-toggle disabled>Disabled</mat-slide-toggle>
 
     </mat-card-content>

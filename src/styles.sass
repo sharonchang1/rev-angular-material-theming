@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/indigo-pink.css'
+// @import '@angular/material/prebuilt-themes/indigo-pink.css'
+// @import '@angular/material/prebuilt-themes/pink-bluegrey.css'
+// @import '@angular/material/prebuilt-themes/purple-green.css'
+@import './custom-theme.scss'
+// @import './custom-background-theme.scss'
+// @import '~@angular/material/theming/theming'
 
 // The following are just hacky styles to make it easier to style. When creating an actual living styleguide, these are going to have to be cleaned up.
+
+
 
 mat-card
   margin-bottom: 5em
@@ -9,19 +16,18 @@ mat-card
   margin-left: 10em
 
 .mat-card
-  background-color: blue
-  .mat-stroked-button
+  // background-color: #f4f4f4
+  .mat-flat-button
+    border-radius: 0px
     display: block
     margin: 1em
     min-width: 150px
-
-mat-form-field
-  display: block !important
-  .mat-form-field-wrapper
+  .mat-form-field
+    display: block
 
 mat-card-subtitle
   padding-top: 1em
 
-.mat-stroked-button
+.mat-flat-button
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1) 50%, transparent 50%)
-  // background: linear-gradient(to bottom right, #830024 50%, transparent 50.5%) no-repeat bottom, linear-gradient(0deg, #830024, #830024) no-repeat top
+  // TODO: Not sure why it has to be here rather than in the section under .mat-card...?
