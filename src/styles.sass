@@ -36,15 +36,37 @@ mat-card-subtitle
   // TODO: Not sure why it has to be here rather than in the section under .mat-card...?
 
 #new-style
+  label
+    text-transform: uppercase
   .mat-form-field-disabled
     opacity: .5
-  .mat-focused
-    .mat-form-field-flex
-      border: solid 2px $promo-blue
   .mat-form-field-flex
-    box-shadow: inset 0px 1px 3px 0px rgba( 133, 160, 171 ,1 )
-    // border: solid 1px $promo-blue
-    border-radius: 0px
+    // box-sizing: border-box
     background-color: transparent
+  .mat-form-field-type-mat-input
+    .mat-form-field-flex
+      box-shadow: inset 0px 1px 3px 0px rgba( 133, 160, 171 ,1 )
+      // border: solid 1px $promo-blue
+      border-radius: 0px
+  .mat-form-field-type-mat-select
+    .mat-form-field-flex
+      // outline: solid 1px $promo-blue
+      border: solid 1px $promo-blue
+      border-radius: 5px
+
   .mat-form-field-underline
     display: none
+
+  .mat-focused.mat-form-field-type-mat-input
+    .mat-form-field-flex
+      outline: solid 2px $promo-blue
+
+  .mat-focused.mat-form-field-type-mat-select
+    .mat-form-field-flex
+      box-shadow: 0px 0px 0px 1px $promo-blue
+
+  .mat-select-arrow
+    color: $promo-blue
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-top: 8px solid
