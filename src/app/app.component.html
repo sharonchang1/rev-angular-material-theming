@@ -200,6 +200,19 @@
     </mat-card-content>
   </mat-card>
 
+  <mat-card>
+    <mat-card-title>Tabsets</mat-card-title>
+    <mat-card-content>
+      <mat-button-toggle-group>
+        <mat-button-toggle value="tab-1">Tab 1</mat-button-toggle>
+        <mat-button-toggle value="tab-2" selected>Tab 2</mat-button-toggle>
+        <mat-button-toggle value="tab-3" disabled id="disabled">Tab 3</mat-button-toggle>
+        <mat-button-toggle value="tab-4">Tab 4</mat-button-toggle>
+        <mat-button-toggle value="tab-5">Tab 5</mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-card-content>
+  </mat-card>
+
 </div>
 
 <router-outlet></router-outlet>

@@ -16,6 +16,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
@@ -39,6 +40,7 @@ import { MatListModule } from '@angular/material/list';
     MatCheckboxModule,
     MatRadioModule,
     MatSlideToggleModule,
+    MatButtonToggleModule,
 
     MatFormFieldModule,
     MatListModule

@@ -164,11 +164,62 @@ $angular-material-theme-warn: mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $angular-material-theme-theme: mat-light-theme($angular-material-theme-primary, $angular-material-theme-accent, $angular-material-theme-warn);
 
+@mixin theme-mixin($app-theme) {
+  $primary: map-get($app-theme, primary);
+
+  mat-button-toggle-group.mat-button-toggle-group.mat-button-toggle-group-appearance-standard {
+    // background-color:mat-color($primary);
+    border-color: mat-color($primary);
+    border-width: 2px;
+    border-radius: 50px;
+    width: 100%;
+    mat-button-toggle {
+      border-color: mat-color($primary);
+      color: mat-color($primary);
+      background-color: transparent;
+      flex-grow: 1;
+      & + .mat-button-toggle {
+        border-color: mat-color($primary);
+        border-width: 2px;
+      }
+      button {
+        border-color: mat-color($primary);
+      }
+      &.mat-button-toggle-disabled.mat-button-toggle-appearance-standard {
+        z-index: 1;
+        button {
+          opacity: .5;
+        }
+        &.cdk-focused.cdk-mouse-focused {
+          outline-color: transparent;
+          -webkit-tap-highlight-color: transparent;
+        }
+      }
+    }
+    .mat-button-toggle-checked {
+      background-color: mat-color($primary);
+      .mat-button-toggle-label-content {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  // .mat-button-toggle-checked {
+  //   background-color: mat-color($primary);
+  //   font-weight: bold;
+  //
+  //   .mat-button-toggle-label-content{
+  //       color: #FFFFFF;
+  //   }
+  // }
+}
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 // @include angular-material-theme($angular-material-theme-theme);
 @include angular-material-theme($rev-theme);
+@include theme-mixin($rev-theme);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
